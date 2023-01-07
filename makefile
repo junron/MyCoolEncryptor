@@ -1,4 +1,4 @@
-all: coolencrypt
+FILES = $(shell env)
 
-coolencrypt: coolsdk/cool.c program.c
-	$(CC) coolsdk/cool.c program.c -o coolencrypt
+all:
+	echo $(FILES)
