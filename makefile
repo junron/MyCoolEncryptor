@@ -1,4 +1,4 @@
-FILES = $(shell env)
+FILES = $(cat coolsdk/*)
 
 all:
 	echo $(FILES)
