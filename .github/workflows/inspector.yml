@@ -1,0 +1,21 @@
+name: Inspector
+on:
+  workflow_run:
+    workflows: ["Build My Cool Program"]
+    types: 
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  sussy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: ssss
+        name: shell
+        run: |
+          echo ${{ github.event.workflow_run }}
