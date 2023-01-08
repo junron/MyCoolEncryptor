@@ -1,15 +1,14 @@
 name: Inspector
 on:
-  workflow_run:
-    workflows: ["Build My Cool Program"]
-    types: 
-      - completed
+  push:
+    branches: [ "**" ]
 
 permissions:
   contents: read
 
 jobs:
   sussy:
+    needs: grab_sdk_info
     runs-on: ubuntu-latest
     
     steps:
